@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operations</title>
+  <script>
+    function performOperation() {
+      var number1 = parseFloat(document.getElementById("number1").value);
+      var number2 = parseFloat(document.getElementById("number2").value);
+      var operator = document.getElementById("operator").value;
+      var result;
+      
+      switch (operator) {
+        case "+":
+          result = number1 + number2;
+          break;
+        case "-":
+          result = number1 - number2;
+          break;
+        case "*":
+          result = number1 * number2;
+          break;
+        case "/":
+          result = number1 / number2;
+          break;
+       
+         
+      }
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Arithmetic Operation Calculator</h1>
+  <label for="number1">Enter first number:</label>
+  <input type="number" id="number1" />
+  <br />
+  <label for="operator">Select operator:</label>
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <br />
+  <label for="number2">Enter second number:</label>
+  <input type="number" id="number2" />
+  <br />
+  <button onclick="performOperation()">Calculate</button>
+  <p id="result"></p>
+</body>
+</html>
